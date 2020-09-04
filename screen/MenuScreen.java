@@ -21,7 +21,7 @@ public class MenuScreen {
 	public void init() {
         Container cp = window.getContentPane();
         JPanel panel = new JPanel();
-        panel.setPreferredSize(new Dimension(500, 300));
+        panel.setPreferredSize(new Dimension(400, 200));
         panel.setLayout(new GridLayout(4, 1));
 		JButton dtoBCalcButton = new JButton("Decimal to Binary");
 		JButton btoDCalcButton = new JButton("Binary to Decimal");
@@ -33,5 +33,20 @@ public class MenuScreen {
 		panel.add(htoDCalcButton);
         cp.add(BorderLayout.CENTER, panel);
 
+		dtoBCalcButton.addActionListener( e -> {
+            window.getContentPane().removeAll();
+            var calc = new DecimalToBinary(window);
+            calc.init();
+            window.pack();
+            window.revalidate();
+		});
+		
+		btoDCalcButton.addActionListener( e -> {
+            window.getContentPane().removeAll();
+            var calc = new BinaryToDecimal(window);
+            calc.init();
+            window.pack();
+            window.revalidate();
+        });
     }
 }
