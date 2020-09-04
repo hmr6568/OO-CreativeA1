@@ -33,7 +33,7 @@ public class DecimalToBinary {
         Container cp = window.getContentPane();
         var scrollPane = new JScrollPane(display, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
             JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setPreferredSize(new Dimension(500, 500));
+        scrollPane.setPreferredSize(new Dimension(400, 400));
         cp.add(BorderLayout.CENTER, scrollPane);
 
         JPanel southPanel = new JPanel();

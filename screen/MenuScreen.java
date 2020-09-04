@@ -47,6 +47,22 @@ public class MenuScreen {
             calc.init();
             window.pack();
             window.revalidate();
-        });
+		});
+		
+		dtoHCalcButton.addActionListener( e -> {
+            window.getContentPane().removeAll();
+            var calc = new DecimalToHex(window);
+            calc.init();
+            window.pack();
+            window.revalidate();
+		});
+		
+		htoDCalcButton.addActionListener( e -> {
+            window.getContentPane().removeAll();
+            var calc = new HextoDecimal(window);
+            calc.init();
+            window.pack();
+            window.revalidate();
+		});
     }
 }
